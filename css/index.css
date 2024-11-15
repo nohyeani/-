@@ -17,6 +17,21 @@ body {
 
 }
 
+:root{
+ --weight-font: 'yg-jalnan';
+
+ --main-color1:#F5E789;
+ --main-color2:#d5d0f2;
+ --main-color3: #9889f4;
+ --main-color4:#5b5775;
+}
+/* pc버전 */
+@media(min-width:950px){
+
+}
+
+
+
 /* header */
 header {
     width: 100%;
@@ -41,10 +56,10 @@ header a {
     width: 100%;
     height: 100%;
     display: block;
-    color: #5b5775;
+    color:var(--main-color4);
     font-size: 20px;
     font-weight: bold;
-    font-family: 'yg-jalnan';
+    font-family: var(--weight-font);
 }
 
 header a:hover {
@@ -57,7 +72,7 @@ header a:hover {
 #visual {
     width: 100%;
     height: 100vh;
-    background-color: #F5E789;
+    background-color:var(--main-color1);
 }
 
 #visual .box {
@@ -67,20 +82,20 @@ header a:hover {
     line-height: 50px;
     display: flex;
     margin: 50px auto;
-    font-family: 'yg-jalnan';
+    font-family:var(--weight-font);
 }
 
 #visual .box1 {
     width: 100%;
     height: 100%;
-    background-color: #d5d0f2;
+    background-color: var(--main-color2);
     border-top-left-radius: 50px;
 }
 
 #visual .box2 {
     width: 100%;
     height: 100%;
-    background-color: #9889f4
+    background-color: var(--main-color3);
 }
 
 #visual .noh {
@@ -100,12 +115,12 @@ header a:hover {
 }
 
 #visual h2 {
-    font-family: 'yg-jalnan';
+    font-family: var(--weight-font);
     font-size: 70px;
 }
 
 #visual span {
-    color: #5b5775;
+    color: var(--main-color4);
 }
 
 #visual .noh>li {
@@ -169,7 +184,7 @@ header a:hover {
     transform: translateX(-50%);
 }
 
-.con1 .bg-g {
+/* .con1 .bg-g {
     width: 350px;
     height: 500px;
     background-color: #ccc;
@@ -177,17 +192,19 @@ header a:hover {
     top: -10px;
     left: 20px;
     border-radius: 100px;
-}
+} */
 
 .con1 .bg-l {
     width: 350px;
     height: 500px;
-    background-color: #d5d0f2;
+    background-color:var(--main-color2
+    );
     position: absolute;
     left: 50%;
     top: 0px;
     transform: translateX(-50%);
     border-radius: 100px;
+    box-shadow:10px 10px 3px #ccc;
 }
 
 .con1 .me {
@@ -202,7 +219,7 @@ header a:hover {
 }
 
 .con1 li:first-child h3 {
-    font-family: 'yg-jalnan';
+    font-family:var(--weight-font);
     margin: 50px;
 
 }
@@ -214,7 +231,7 @@ header a:hover {
 }
 
 .con1 h4 {
-    font-family: 'yg-jalnan';
+    font-family: var(--weight-font);
     width: 100px;
 
 }
@@ -311,7 +328,7 @@ header a:hover {
 .con2 {
     width: 100%;
     height: 100vh;
-    background-color: #F5E789;
+    background-color: var(--main-color1);
     position: relative;
 }
 
@@ -341,7 +358,7 @@ header a:hover {
 
 .con2 div h4 {
     width: 120px;
-    font-family: 'yg-jalnan';
+    font-family: var(--weight-font);
 
 }
 
@@ -372,7 +389,7 @@ header a:hover {
     width: 150px;
     height: 50px;
     line-height: 50px;
-    background-color: #9889f4;
+    background-color: var(--main-color3);
     text-align: center;
     border-radius: 50px;
 
@@ -382,7 +399,7 @@ header a:hover {
     width: 150px;
     height: 50px;
     line-height: 50px;
-    background-color: #9889f4;
+    background-color: var(--main-color3);
     text-align: center;
     border-radius: 50px;
 
@@ -432,7 +449,7 @@ header a:hover {
 
 .con3 div h4 {
     width: 120px;
-    font-family: 'yg-jalnan';
+    font-family: var(--weight-font);
 
 }
 
@@ -466,7 +483,7 @@ header a:hover {
     width: 150px;
     height: 50px;
     line-height: 50px;
-    background-color: #9889f4;
+    background-color: var(--main-color3);
     text-align: center;
     border-radius: 50px;
 
@@ -476,7 +493,7 @@ header a:hover {
     width: 150px;
     height: 50px;
     line-height: 50px;
-    background-color: #9889f4;
+    background-color:var(--main-color3);
     text-align: center;
     border-radius: 50px;
 
@@ -498,7 +515,7 @@ header a:hover {
 .con4 {
     width: 100%;
     height: 100vh;
-    background-color: #F5E789;
+    background-color: var(--main-color1);
     position: relative;
 }
 
@@ -528,7 +545,7 @@ header a:hover {
 
 .con4 div h4 {
     width: 120px;
-    font-family: 'yg-jalnan';
+    font-family: var(--weight-font);
 
 }
 
@@ -559,7 +576,7 @@ header a:hover {
     width: 150px;
     height: 50px;
     line-height: 50px;
-    background-color: #9889f4;
+    background-color: var(--main-color3);
     text-align: center;
     border-radius: 50px;
 
@@ -569,7 +586,7 @@ header a:hover {
     width: 150px;
     height: 50px;
     line-height: 50px;
-    background-color: #9889f4;
+    background-color: var(--main-color3);
     text-align: center;
     border-radius: 50px;
 
@@ -646,7 +663,7 @@ header a:hover {
 .con6 {
     width: 100%;
     height: 100vh;
-    background-color: #F5E789;
+    background-color:var(--main-color1);
 
 }
 
@@ -665,19 +682,19 @@ header a:hover {
     width: 300px;
     height: 300px;
     border-radius: 300px;
-    background-color: #d5d0f2;
+    background-color: var(--main-color2);
 }
 
 .con6 .txt {
     position: absolute;
     font-size: 40px;
-    font-family: 'yg-jalnan';
+    font-family: var(--weight-font);
     top: 55px;
     left: 100px;
 }
 
 .con6 .co {
-    color: #5b5775;
+    color: var(--main-color4);
 }
 
 .con6 ul {
@@ -694,14 +711,21 @@ header a:hover {
     margin-top: 100px;
 }
 
-.con6 li:first-child img {
-    width: 80px;
+
+.con6 li:first-child div {  
+    width:200px;
+    height:50px;
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    
+}
+.con6 i{
+  
+    font-size:30px;
 }
 
-.con6 li:first-child div {
-    display: flex;
-    align-items: center;
-}
 
 .con6 .consideration {
     font-size: 20px;
@@ -712,6 +736,7 @@ header a:hover {
 
 .con6 .act {
     position: relative;
+    perspective:800px;
 }
 
 .con6 .act img {
@@ -731,29 +756,29 @@ header a:hover {
 
 @keyframes active {
     0% {
-        transform: translateX(0px);
+        transform: translate3d(0, 0, 0);
     }
 
     50% {
-        transform: translateX(20px);
+        transform: translate3d(0, 0, 50px);
     }
 
     100% {
-        transform: translateX(0px);
+        transform: translate3d(0, 0, 0);
     }
 }
 
 @keyframes move {
     0% {
-        transform: translateX(0px);
+        transform: translate3d(0, 0, 0);
     }
 
     50% {
-        transform: translateX(-20px);
+        transform: translate3d(0, 0, 50px);
     }
 
     100% {
-        transform: translateX(0px);
+        transform: translate3d(0, 0, 0);
     }
 }
 
