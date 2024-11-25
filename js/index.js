@@ -1,6 +1,6 @@
 $(function(){
 
-    let baseline = -100;
+    let baseline = -400;
 let visual =$("#visual").offset().top + baseline;
 let con1 =$(".con1").offset().top + baseline;
 let con2 =$(".con2").offset().top + baseline;
@@ -8,14 +8,17 @@ let con3 =$(".con3").offset().top + baseline;
 let con4 =$(".con4").offset().top + baseline;
 let con5 =$(".con5").offset().top + baseline;
 let con6 =$(".con6").offset().top + baseline;
+let footer = $("footer").offset().top +baseline;
 
-// con1
+con1
 
 setInterval(function(){
     $("#visual .slide").stop().animate({"margin-top":"-700px"},500,function(){
-        $(".slide img").first().appendTo("#visual .slide");
+        $(".slide li").first().appendTo("#visual .slide");
         $("#visual .slide").css({"margin-top":"0px"});
     });
+
+
 },500);
 
 
@@ -47,6 +50,8 @@ $(window).on("scroll",function(){
     
     }else if(scroll >= con5 && scroll < con6){
         $(".con5 li").addClass("on");
+    }else {
+        $(".con6 .thank").stop().animate({"left":"0px"});
     }
 
 

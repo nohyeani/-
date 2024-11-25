@@ -10,6 +10,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/index.js"></script>
@@ -35,11 +38,20 @@
                 <h2>노예은 <span>포트폴리오</span></h2>
             </li>
             <li>
-                <div class="slide">
-                    <img class="pic1" src="img/music.svg" alt="노래듣는 일러스트">
-                    <img class="pic2" src="img/eat.svg" alt="밥먹는 일러스트">
-                    <img class="pic3" src="img/computer.svg" alt="컴퓨터하는 일러스트">
-                </div>
+                <ul class="slide">
+                    <li>
+                        <img src="img/music.svg" alt="노래듣는 일러스트">
+                        <span>I like music!</span>
+                    </li>
+                    <li>
+                        <img src="img/eat.svg" alt="밥먹는 일러스트">
+                        <span>I like eat!</span>
+                    </li>
+                    <li>
+                        <img src="img/computer.svg" alt="컴퓨터하는 일러스트">
+                        <span>I like coding!</span>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -47,7 +59,6 @@
         <ul>
             <li>
                 <div class="bg">
-                    <!-- <div class="bg-g"></div> -->
                     <div class="bg-l"></div>
                     <img class="me" src="img/me.png" alt="나의 사진">
                 </div>
@@ -178,7 +189,7 @@
                 </div>
                 <div>
                     <h4>사용툴</h4>
-                    <div class="">
+                    <div>
                         <img src="img/skills_1.png" alt="html아이콘">
                         <img src="img/skills_2.png" alt="css아이콘">
                         <img src="img/skills_3.png" alt="js아이콘">
@@ -221,7 +232,7 @@
                 </div>
                 <div>
                     <h4>사용툴</h4>
-                    <div class="">
+                    <div>
                         <img src="img/skills_1.png" alt="html아이콘">
                         <img src="img/skills_2.png" alt="css아이콘">
                         <img src="img/skills_3.png" alt="js아이콘">
@@ -251,19 +262,29 @@
         </ul>
     </section>
     <section class="con5" id="con5">
-        <ul>
-            <li><img src="img/ill1.PNG" alt="일러스트1"></li>
-            <li>
-                <div>
-                    <img src="img/ill2.PNG" alt="일러스트2">
-                    <img src="img/ill3.PNG" alt="일러스트3">
-                </div>
-                <div>
-                    <img src="img/ill4.PNG" alt="일러스트4">
-                    <img src="img/ill5.PNG" alt="일러스트5">
-                </div>
-            </li>
-        </ul>
+        <div class="inner">
+            <div class="textbox">
+                <h2>Illustrator<br><span>Design</span></h2>
+                <p>일러스트결과물입니다.</p>
+                <ul>
+                    <li class="designbox"><a href="#">일러스트1</a></li>
+                    <li class="designbox"><a href="#">일러스트2</a></li>
+                    <li class="designbox"><a href="#">일러스트3</a></li>
+                    <li class="designbox"><a href="#">일러스트4</a></li>
+                    <li class="designbox"><a href="#">일러스트5</a></li>
+
+                </ul>
+            </div>
+            <ul class="imgbox">
+                <li class="img1 upbox"><img src="img/ill1.PNG" alt="일러스트1"></li>
+                <li class="img2 upbox"><img src="img/ill2.PNG" alt="일러스트2"></li>
+                <li class="img3 upbox"><img src="img/ill3.PNG" alt="일러스트3"></li>
+                <li class="img4 upbox"><img src="img/ill4.PNG" alt="일러스트4"></li>
+                <li class="img5 upbox"><img src="img/ill5.PNG" alt="일러스트5"></li>
+                <li class="img upbox"></li>
+            </ul>
+        </div>
+
     </section>
     <section class="con6" id="con6">
         <div class="contact">
@@ -304,6 +325,55 @@
         <p>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
             © 2024 Noh, yea-eun. All Rights Reserved.</p>
     </footer>
+
+
+
+
+
+
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        let upbox = document.querySelectorAll(".upbox");
+        let designbox = document.querySelectorAll(".designbox");
+        console.log(designbox);
+        let tl = gsap.timeline({
+            scrollTrigger: {
+
+                trigger: ".con5",
+                pin: true,
+
+                // 부드럽게하는거
+                scrub: 3,
+                start: "top top",
+                // 시작부분에서 400%까지 스크롤한 후 종료
+                end: "+=300%",
+                // markers: true,
+                onUpdate: (self) => {
+                    let index = Math.floor(self.progress * designbox.length);
+                    console.log(index);
+                    designbox.forEach((t) => t.classList.remove("check"));
+                    if (designbox[index]) {
+                        designbox[index].classList.add("check");
+                    }
+                }
+            },
+
+        });
+
+        tl.from(upbox, { y: "200%", duration: "10", ease: "none", stagger: "5" });
+
+        tl.to(upbox, { y: "0" })
+
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>
