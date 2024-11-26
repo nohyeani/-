@@ -16,6 +16,8 @@
 
 body {
     font-family: 'NanumSquareRound';
+    box-sizing: border-box;
+    overflow-x: hidden;
 
 }
 
@@ -30,7 +32,7 @@ body {
 }
 
 /* pc버전 */
-@media(min-width:950px) {
+@media(min-width:1200px) {
 
     /* header */
     header {
@@ -70,9 +72,10 @@ body {
 
 
     #visual {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background-color: var(--main-color1);
+        /* background: linear-gradient(rgb(72, 69, 123), rgb(108, 97, 128), rgb(140, 127, 132), rgb(171, 158, 135), rgb(202, 190, 137)); */
     }
 
     #visual .box {
@@ -99,9 +102,9 @@ body {
     }
 
     #visual .noh {
-        /* width: 100%; */
+        width: 1200px;
         display: flex;
-        gap: 200px;
+        justify-content: center;
         align-items: center;
         text-align: center;
         position: absolute;
@@ -109,7 +112,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%) translate3d(0, 0, 0) skewY(0deg);
 
-        /* overflow: hidden; */
+        overflow: hidden;
         animation: textAni 1.8s;
     }
 
@@ -189,6 +192,7 @@ body {
         width: 100%;
         height: 100vh;
         position: relative;
+        overflow: hidden;
     }
 
     .con1>ul {
@@ -366,6 +370,7 @@ body {
         height: 100vh;
         background-color: var(--main-color1);
         position: relative;
+        overflow: hidden;
     }
 
     .con2 ul {
@@ -457,6 +462,7 @@ body {
         width: 100%;
         height: 100vh;
         position: relative;
+        overflow: hidden;
     }
 
     .con3 ul {
@@ -553,6 +559,7 @@ body {
         height: 100vh;
         background-color: var(--main-color1);
         position: relative;
+        overflow: hidden;
     }
 
     .con4 ul {
@@ -646,6 +653,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
 
     }
 
@@ -745,6 +753,7 @@ body {
         width: 100%;
         height: 100vh;
         background-color: var(--main-color1);
+        overflow: hidden;
 
     }
 
@@ -871,6 +880,7 @@ body {
         height: 100%;
         background-color: #333;
         padding: 50px 0px;
+        overflow: hidden;
     }
 
     footer p {
@@ -881,11 +891,8 @@ body {
 
 
 
-
-
-
 /* 태블릿버전 */
-@media(max-width:949px) and (min-width:650px) {
+@media(max-width:1199px) and (min-width:650px) {
 
     /* header */
     header {
@@ -938,6 +945,7 @@ body {
         display: flex;
         margin: 50px auto;
         font-family: var(--weight-font);
+        display: none;
     }
 
     #visual .box1 {
@@ -973,7 +981,7 @@ body {
     #visual h2 {
         text-align: center;
         font-family: var(--weight-font);
-        font-size: 50px;
+        font-size: 40px;
 
 
     }
@@ -1010,13 +1018,13 @@ body {
 
     #visual .slide {
         width: 100%;
-        height: 100%;
+        height: 700px;
 
     }
 
     #visual .slide img {
-        width: 80%;
-        height: 100%;
+        width: 100%;
+        height: 700px;
 
     }
 
@@ -1049,7 +1057,7 @@ body {
         width: 90%;
         /* display: flex;
         gap: 100px; */
-        text-align: center;
+        /* text-align: center; */
         margin: 0px auto;
         position: absolute;
         top: 50%;
@@ -1068,7 +1076,7 @@ body {
     }
 
     .con1 .bg {
-        width: 100%;
+        width: 300px;
         height: 500px;
         position: relative;
         top: 0px;
@@ -1091,7 +1099,7 @@ body {
     .con1 .me {
         width: 100%;
         height: 400px;
-        /* object-fit: cover; */
+        object-fit: cover;
         position: absolute;
         bottom: 0px;
         left: 50%;
@@ -1772,29 +1780,30 @@ body {
 
     #visual {
         width: 100%;
-        height: 100vh;
+        height: 120vh;
         background-color: var(--main-color1);
     }
 
     #visual .box {
-        width: 100%;
+        width: 300px;
         height: 50px;
         text-align: center;
         line-height: 50px;
         display: flex;
         margin: 50px auto;
         font-family: var(--weight-font);
+        display: none;
     }
 
     #visual .box1 {
-        width: 100%;
+        width: 150px;
         height: 100%;
         background-color: var(--main-color2);
         border-top-left-radius: 50px;
     }
 
     #visual .box2 {
-        width: 100%;
+        width: 150px;
         height: 100%;
         background-color: var(--main-color3);
     }
@@ -1819,7 +1828,7 @@ body {
     #visual h2 {
         text-align: center;
         font-family: var(--weight-font);
-        font-size: 50px;
+        font-size: 30px;
 
 
     }
@@ -1855,14 +1864,14 @@ body {
     }
 
     #visual .slide {
-        width: 100%;
-        height: 100%;
+        width: 300px;
+        height: 700px;
 
     }
 
     #visual .slide img {
-        width: 80%;
-        height: 100%;
+        width: 100%;
+        height: 700px;
 
     }
 
@@ -1871,10 +1880,10 @@ body {
     }
 
     #visual .slide span {
-        font-size: 30px;
+        font-size: 20px;
         font-family: var(--weight-font);
         position: absolute;
-        bottom: 0px;
+        bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
         /* display: none; */
@@ -1895,7 +1904,7 @@ body {
         width: 90%;
         /* display: flex;
         gap: 100px; */
-        text-align: center;
+        /* text-align: center; */
         margin: 0px auto;
         position: absolute;
         top: 50%;
@@ -1963,6 +1972,11 @@ body {
         font-family: var(--weight-font);
         width: 100px;
 
+
+    }
+
+    .con1 li:last-child p {
+        font-size: 14px;
     }
 
     .con1 .gr {
@@ -2573,6 +2587,7 @@ body {
         height: 100%;
         background-color: #333;
         padding: 50px 0px;
+        font-size: 14px;
     }
 
     footer p {
@@ -3426,6 +3441,7 @@ body {
         height: 100%;
         background-color: #333;
         padding: 50px 0px;
+        font-size: 14px;
     }
 
     footer p {
