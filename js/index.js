@@ -12,17 +12,10 @@ let footer = $("footer").offset().top +baseline;
 
 con1
 
-setInterval(function(){
-    $("#visual .slide").stop().animate({"margin-top":"-700px"},500,function(){
-        $(".slide li").first().appendTo("#visual .slide");
-        $("#visual .slide").css({"margin-top":"0px"});
-    });
-
-
-},500);
 
 
 
+// scroll
 $(window).on("scroll",function(){
 
     
@@ -58,10 +51,26 @@ $(window).on("scroll",function(){
 });
 
 
+// slide
+
+setInterval(function(){
+    $("#visual .slide").stop().animate({"margin-top":"-700px"},500,function(){
+        $(".slide li").first().appendTo("#visual .slide");
+        $("#visual .slide").css({"margin-top":"0px"});
+    });
+
+
+},500);
 
 
 
+// h_menu
 
-
+$("header .bar").on("click",function(){
+    $(".h_menu").show();
+});
+$(".h_menu .close").on("click",function(){
+    $(".h_menu").hide();
+});
     
 });

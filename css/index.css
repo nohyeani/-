@@ -39,16 +39,26 @@ body {
         width: 100%;
         position: fixed;
         z-index: 10;
+        display: flex;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    header h1 {
+        width: 200px;
     }
 
     header ul {
+        width: calc(100% - 200px);
         display: flex;
         justify-content: space-between;
+
 
     }
 
     header li {
-        width: calc(100%/5);
+        /* width: calc(100%/4); */
         height: 50px;
         line-height: 50px;
         text-align: center;
@@ -66,6 +76,16 @@ body {
 
     header a:hover {
         color: #222;
+    }
+
+    header .bar {
+        display: none;
+        font-size: 30px;
+        color: var(--main-color4)
+    }
+
+    .h_menu {
+        display: none;
     }
 
     /* visual */
@@ -695,6 +715,7 @@ body {
 
     .con5 .textbox li {
         margin-bottom: 10px;
+        font-family: var(--weight-font);
     }
 
     .con5 .imgbox {
@@ -890,7 +911,6 @@ body {
 }
 
 
-
 /* 태블릿버전 */
 @media(max-width:1199px) and (min-width:650px) {
 
@@ -899,19 +919,22 @@ body {
         width: 100%;
         position: fixed;
         z-index: 10;
+        display: flex;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    header h1 {
+        width: 200px;
     }
 
     header ul {
+        width: calc(100% - 200px);
         display: flex;
         justify-content: space-between;
 
-    }
 
-    header li {
-        width: calc(100%/5);
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
     }
 
     header a {
@@ -926,6 +949,12 @@ body {
 
     header a:hover {
         color: #222;
+    }
+
+    header .bar {
+        display: none;
+        font-size: 30px;
+        color: var(--main-color4)
     }
 
     /* visual */
@@ -962,11 +991,6 @@ body {
     }
 
     #visual .noh {
-        /* width: 100%; */
-        /* display: flex; */
-        /* gap: 200px;
-        align-items: center;
-        text-align: center; */
         position: absolute;
         top: 60%;
         left: 50%;
@@ -1003,14 +1027,10 @@ body {
         color: var(--main-color4);
     }
 
-    /* #visual .noh>li {
-        width: calc(100%/2);
-    } */
-
 
 
     #visual li:last-child {
-        width: 90%;
+        width: 100%;
         height: 700px;
         overflow: hidden;
 
@@ -1033,10 +1053,10 @@ body {
     }
 
     #visual .slide span {
-        font-size: 30px;
+        font-size: 25px;
         font-family: var(--weight-font);
         position: absolute;
-        bottom: 0px;
+        bottom: 100px;
         left: 50%;
         transform: translateX(-50%);
         /* display: none; */
@@ -1114,8 +1134,7 @@ body {
     }
 
     .con1 li:last-child>div {
-        width: 90%;
-
+        width: 100%;
         display: flex;
         gap: 20px;
         margin-bottom: 20px;
@@ -1125,6 +1144,10 @@ body {
         font-family: var(--weight-font);
         width: 100px;
 
+    }
+
+    .con1 li:last-child p {
+        font-size: 0.8rem;
     }
 
     .con1 .gr {
@@ -1238,9 +1261,7 @@ body {
 
     .con2 ul div {
         text-align: center;
-        /* display: flex; */
-        align-items: center;
-        gap: 20px;
+
         margin-bottom: 30px;
         opacity: 0;
         margin-left: -50px;
@@ -1266,15 +1287,17 @@ body {
 
 
     .con2 .click {
-        margin: 100px auto;
-        text-align: center;
 
+        text-align: center;
+        margin-top: 40px;
+        padding-left: 90px;
     }
 
     .con2 .click a {
         display: block;
         width: 150px;
         height: 50px;
+
     }
 
     .con2 .click1 {
@@ -1284,6 +1307,7 @@ body {
         background-color: var(--main-color3);
         text-align: center;
         border-radius: 50px;
+
 
     }
 
@@ -1361,8 +1385,8 @@ body {
     }
 
     .con3 .click {
-        margin-top: 100px;
-
+        margin-top: 40px;
+        padding-left: 90px;
 
     }
 
@@ -1458,7 +1482,8 @@ body {
     }
 
     .con4 .click {
-        margin-top: 100px;
+        margin-top: 40px;
+        padding-left: 90px;
     }
 
     .con4 .click a {
@@ -1541,10 +1566,11 @@ body {
 
     .con5 .textbox p {
         margin: 20px 0px;
-        font-size: 30px;
+        font-size: 18px;
     }
 
     .con5 .textbox li {
+        font-family: var(--weight-font);
         margin-bottom: 10px;
     }
 
@@ -1674,6 +1700,8 @@ body {
         font-weight: bold;
         margin-top: 50px;
         /* font-family: 'yg-jalnan'; */
+        font-size: 0.8rem;
+        line-height: 30px;
     }
 
     .con6 .act {
@@ -1684,7 +1712,7 @@ body {
     .con6 .act img {
         width: 100%;
         position: absolute;
-        bottom: -350px;
+        bottom: -300px;
         left: 0px;
     }
 
@@ -1746,11 +1774,14 @@ body {
         width: 100%;
         position: fixed;
         z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+        box-sizing: border-box;
     }
 
     header ul {
-        display: flex;
-        justify-content: space-between;
+        display: none;
 
     }
 
@@ -1775,12 +1806,67 @@ body {
         color: #222;
     }
 
+    header .bar {
+        font-size: 30px;
+        color: var(--main-color4)
+    }
+
+    /* h_menu */
+    .h_menu {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+
+    .h_menu ul {
+        top: 0px;
+        position: absolute;
+        right: 0px;
+        width: 200px;
+        height: 100%;
+        background-color: #fff;
+        font-family: var(--weight-font);
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 11;
+        font-size: 20px;
+    }
+
+    .h_menu li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100% / 4);
+
+    }
+
+    .h_menu li a {
+        display: block;
+
+    }
+
+    .h_menu li a:hover {
+        color: var(--main-color3);
+    }
+
+    .h_menu .close {
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 13;
+    }
+
     /* visual */
 
 
     #visual {
         width: 100%;
-        height: 120vh;
+        height: 100vh;
         background-color: var(--main-color1);
     }
 
@@ -1962,21 +2048,24 @@ body {
 
     .con1 li:last-child>div {
         width: 90%;
-
-        display: flex;
+        /* display: flex; */
         gap: 20px;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .con1 h4 {
         font-family: var(--weight-font);
         width: 100px;
+        font-size: 0.9rem;
+        margin: 10px auto;
+
 
 
     }
 
     .con1 li:last-child p {
-        font-size: 14px;
+        font-size: 0.8rem;
     }
 
     .con1 .gr {
@@ -2118,8 +2207,8 @@ body {
 
 
     .con2 .click {
-        margin: 100px auto;
-        text-align: center;
+        margin-top: 40px;
+        padding: 50px;
 
     }
 
@@ -2213,8 +2302,8 @@ body {
     }
 
     .con3 .click {
-        margin-top: 100px;
-
+        margin-top: 40px;
+        padding: 50px;
 
     }
 
@@ -2310,7 +2399,8 @@ body {
     }
 
     .con4 .click {
-        margin-top: 100px;
+        margin-top: 40px;
+        padding: 50px;
     }
 
     .con4 .click a {
@@ -2398,6 +2488,8 @@ body {
 
     .con5 .textbox li {
         margin-bottom: 10px;
+        font-size: 0.9rem;
+        font-family: var(--weight-font);
     }
 
     .con5 .imgbox {
@@ -2472,7 +2564,7 @@ body {
 
     .con6 .thank {
         position: relative;
-        top: 50px;
+        top: 0px;
         left: -100%;
     }
 
@@ -2485,7 +2577,7 @@ body {
 
     .con6 .txt {
         position: absolute;
-        font-size: 20px;
+        font-size: 30px;
         font-family: var(--weight-font);
         top: 20px;
         left: 50px;
@@ -2530,7 +2622,7 @@ body {
 
         font-weight: bold;
         margin-top: 50px;
-        /* font-family: 'yg-jalnan'; */
+        font-size: 0.8rem;
     }
 
     .con6 .act {
@@ -2541,7 +2633,7 @@ body {
     .con6 .act img {
         width: 100%;
         position: absolute;
-        bottom: -350px;
+        bottom: -250px;
         left: 0px;
     }
 
@@ -2606,11 +2698,14 @@ body {
         width: 100%;
         position: fixed;
         z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+        box-sizing: border-box;
     }
 
     header ul {
-        display: flex;
-        justify-content: space-between;
+        display: none;
 
     }
 
@@ -2635,6 +2730,61 @@ body {
         color: #222;
     }
 
+    header .bar {
+        font-size: 30px;
+        color: var(--main-color4)
+    }
+
+    /* h_menu */
+    .h_menu {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+
+    .h_menu ul {
+        top: 0px;
+        position: absolute;
+        right: 0px;
+        width: 200px;
+        height: 100%;
+        background-color: #fff;
+        font-family: var(--weight-font);
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 11;
+        font-size: 20px;
+    }
+
+    .h_menu li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100% / 4);
+
+    }
+
+    .h_menu li a {
+        display: block;
+
+    }
+
+    .h_menu li a:hover {
+        color: var(--main-color3);
+    }
+
+    .h_menu .close {
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 13;
+    }
+
     /* visual */
 
 
@@ -2652,6 +2802,7 @@ body {
         display: flex;
         margin: 50px auto;
         font-family: var(--weight-font);
+        display: none;
     }
 
     #visual .box1 {
@@ -2668,11 +2819,6 @@ body {
     }
 
     #visual .noh {
-        /* width: 100%; */
-        /* display: flex; */
-        /* gap: 200px;
-        align-items: center;
-        text-align: center; */
         position: absolute;
         top: 60%;
         left: 50%;
@@ -2687,7 +2833,7 @@ body {
     #visual h2 {
         text-align: center;
         font-family: var(--weight-font);
-        font-size: 50px;
+        font-size: 22px;
 
 
     }
@@ -2716,7 +2862,7 @@ body {
 
 
     #visual li:last-child {
-        width: 90%;
+        width: 100%;
         height: 700px;
         overflow: hidden;
 
@@ -2729,7 +2875,7 @@ body {
     }
 
     #visual .slide img {
-        width: 80%;
+        width: 100%;
         height: 100%;
 
     }
@@ -2739,10 +2885,10 @@ body {
     }
 
     #visual .slide span {
-        font-size: 30px;
+        font-size: 13px;
         font-family: var(--weight-font);
         position: absolute;
-        bottom: 0px;
+        bottom: 100px;
         left: 50%;
         transform: translateX(-50%);
         /* display: none; */
@@ -2755,7 +2901,7 @@ body {
 
     .con1 {
         width: 100%;
-        height: 200vh;
+        height: 220vh;
         position: relative;
     }
 
@@ -2798,7 +2944,7 @@ body {
         left: 50%;
         top: 0px;
         transform: translateX(-50%);
-        border-radius: 100px;
+        border-radius: 80px;
         box-shadow: 10px 10px 3px #ccc;
     }
 
@@ -2817,12 +2963,12 @@ body {
         font-family: var(--weight-font);
         margin-top: 130px;
 
+
     }
 
     .con1 li:last-child>div {
         width: 90%;
-
-        display: flex;
+        /* display: flex; */
         gap: 20px;
         margin-bottom: 20px;
     }
@@ -2830,11 +2976,12 @@ body {
     .con1 h4 {
         font-family: var(--weight-font);
         width: 100px;
+        margin: 10px auto;
 
     }
 
     .con1 .gr {
-        width: 250px;
+        width: 200px;
         height: 30px;
         background-color: #ccc;
         margin-bottom: 20px;
@@ -3247,7 +3394,7 @@ body {
 
     .con5 .textbox p {
         margin: 20px 0px;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .con5 .textbox li {
@@ -3296,7 +3443,8 @@ body {
     }
 
     .designbox {
-        font-size: 20px;
+        font-size: 16px;
+        font-family: var(--weight-font);
     }
 
     .designbox.check a {
@@ -3385,6 +3533,7 @@ body {
         font-weight: bold;
         margin-top: 50px;
         /* font-family: 'yg-jalnan'; */
+        font-size: 0.7rem;
     }
 
     .con6 .act {
@@ -3395,7 +3544,7 @@ body {
     .con6 .act img {
         width: 100%;
         position: absolute;
-        bottom: -350px;
+        bottom: -250px;
         left: 0px;
     }
 
