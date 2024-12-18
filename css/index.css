@@ -147,6 +147,7 @@ body {
 
     }
 
+    /* 
 
     @keyframes textAni {
         0% {
@@ -162,7 +163,7 @@ body {
 
     #visual span {
         color: var(--main-color4);
-    }
+    } */
 
     /* #visual .noh>li {
         width: calc(100%/2);

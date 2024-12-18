@@ -10,7 +10,6 @@ let con5 =$(".con5").offset().top + baseline;
 let con6 =$(".con6").offset().top + baseline;
 let footer = $("footer").offset().top +baseline;
 
-con1
 
 
 
