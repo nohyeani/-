@@ -725,14 +725,14 @@ body {
     }
 
     .con5 .imgbox img {
-        width: 100%;
+        width: 80%;
     }
 
     .con5 .imgbox li {
         width: 100%;
         position: absolute;
         top: 0%;
-        left: 0px;
+        left: 50px;
     }
 
     .con5 .imgbox .img1 {
@@ -958,6 +958,10 @@ body {
         color: var(--main-color4)
     }
 
+    .h_menu{
+        display:none;
+    }
+
     /* visual */
 
 
@@ -1012,7 +1016,7 @@ body {
     }
 
 
-    @keyframes textAni {
+    /* @keyframes textAni {
         0% {
             opacity: 0;
         }
@@ -1022,7 +1026,7 @@ body {
             transform-origin: top left;
             opacity: 0;
         }
-    }
+    } */
 
     #visual span {
         color: var(--main-color4);
@@ -2843,7 +2847,7 @@ body {
     }
 
 
-    @keyframes textAni {
+    /* @keyframes textAni {
         0% {
             opacity: 0;
         }
@@ -2853,7 +2857,7 @@ body {
             transform-origin: top left;
             opacity: 0;
         }
-    }
+    } */
 
     #visual span {
         color: var(--main-color4);
